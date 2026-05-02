@@ -1,0 +1,14 @@
+[Unit]
+Description=Davet Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/ubuntu/.deno/bin/deno run --allow-env --allow-net --allow-read /home/ubuntu/davet/index.ts
+WorkingDirectory=/home/ubuntu/davet
+Restart=on-failure
+User=ubuntu
+Environment=DENON_PATH=/home/ubuntu/.deno/bin/deno
+
+[Install]
+WantedBy=multi-user.target

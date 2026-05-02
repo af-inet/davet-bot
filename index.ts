@@ -47,7 +47,8 @@ client.on('interactionCreate', async interaction => {
     const hours = Math.floor((totalMinutes % 1440) / 60);
     const minutes = totalMinutes % 60;
 
-    const message = `It has been ${days} days ${hours} hours and ${minutes} minutes since Dave T bought Project Zomboid, and he still hasn't launched it.`;
+    const message = `It has been ${days} days ${hours} hours and ${minutes} minutes since Dave T bought Project Zomboid, and he still hasn't launched it. Dave T plays piano and doesn't want invest time into video games (except league of legends and games that he already likes) ever again.`;
+    // const message = "Dave T plays piano."
     await interaction.reply(message);
   }
 });
